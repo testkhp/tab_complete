@@ -1,0 +1,25 @@
+/*css reset 초기화구문*/
+*{margin: 0; padding: 0; box-sizing: border-box;}
+body{line-height: 1;}
+ul, ol, li{list-style: none;}
+a{text-decoration: none; color: black;}
+
+
+/*탭메뉴 레이아웃*/
+
+.tab_wrap { width:1000px; margin:0 auto;}
+.menu {display:flex; }
+.menu li { width:25%;  line-height:50px; text-align:center;}
+.menu li a { display: block; background-color:black; color:#fff;}
+.menu li.on a {background-color:pink; color:#000; }
+
+.contents {background-color:aqua; position:relative; transition:all 0.5s;}
+.contents > .tabCont { opacity:0;  padding:50px 0; text-align:center; transition:all 0.5s; position:absolute; width:100%; }
+
+/* .contents > .tabCont:nth-child(1) { background-color:aqua;}
+.contents > .tabCont:nth-child(2) { background-color:yellowgreen;}
+.contents > .tabCont:nth-child(3) { background-color:orange;}
+.contents > .tabCont:nth-child(4) { background-color:beige;} */
+
+
+.contents > .tabCont.show {opacity:1; }
